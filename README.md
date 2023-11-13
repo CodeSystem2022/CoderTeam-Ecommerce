@@ -11,11 +11,12 @@ Este proyecto es parte de ... y tiene como objetivo ...
     - [Instalación](#instalación)
   - [Entorno virtual default](#requisitos)
     - [Activación](#activación)
-    - [Uso](#uso)
-  - [Otras opciones](#otras-opciones)
+    - [Correr servidor](#correr-servidor)
+  - [Nuevo entorno virtual](#nuevo-entorno-virtual)
+    - [Creación](#creación)
     - [Requisitos](#requisitos)
     - [Instalación](#instalación)
-    - [Uso](#uso)
+    - [Correr servidor](#correr-servidor)
 - [Contribución](#contribución)
 - [Site Preview](#site-preview )
 
@@ -46,11 +47,11 @@ python3 -m pip install --user virtualenv
 ### 1. Entorno virtual default _(enviromentEcommerce)_:
 #### Activación
 ###### Desde el directorio principal del proyecto recientemente clonado ejecute el siguiente comando para activar el entorno virtual:
-En sistemas Windows:
+##### En sistemas Windows:
 ```bash
 - enviromentEcommerce/Scripts/activate
 ```
-En sistemas basados en Unix (Linux/Mac):
+##### En sistemas basados en Unix (Linux/Mac):
 ```bash
 - source enviromentEcommerce/bin/activate
 
@@ -67,22 +68,27 @@ En sistemas basados en Unix (Linux/Mac):
 ```bash
 - python -m venv nombre_del_entorno
 ```
-
-#### Correr servidor
-###### Luego con el entorno activado -se puede dar cuenta que está activo porque al principio de la línea de comando deberá figurar '(enviromentEcommerce)': 
+#### Activación
+###### Desde el directorio principal del proyecto recientemente clonado ejecute el siguiente comando para activar el entorno virtual:
+##### En sistemas Windows:
 ```bash
-- python -m manage.py runserver
+- nombre_del_entorno/Scripts/activate
+```
+##### En sistemas basados en Unix (Linux/Mac):
+```bash
+- source nombre_del_entorno/bin/activate
 ```
 
 #### Requisitos
+###### En este punto será momento para instalar las dependencias:
 
-Para ejecutar este proyecto, necesitas tener instalado Python 3 y las siguientes bibliotecas:
+Para ejecutar este proyecto, necesitas tener instalado Python 3 y las siguientes dependencias:
 ```bash
 - Django (version 4.2.7)
 - Pillow
 ```
 
-Puedes instalar estas bibliotecas utilizando pip:
+Puedes instalar los requerimientos utilizando pip:
 
 Opción 1:
 ```bash
@@ -93,14 +99,11 @@ Opción 2:
 pip install django Pillow
 ```
 
-
-## Uso
-
-Este proyecto consta de varios módulos:
-
-- **...**: Contiene funciones para ....
-- **...**: Automatiza ....
-- **...**: Analiza y visualiza ....
+#### Correr servidor
+###### Luego, con las dependencias instaladas y el entorno activado -se puede dar cuenta que está activo porque al principio de la línea de comando deberá figurar '(nombre_del_entorno)' ejecutar: 
+```bash
+- python -m manage.py runserver
+```
 
 ## Contribución
 
