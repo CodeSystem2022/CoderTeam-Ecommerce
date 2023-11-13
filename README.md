@@ -17,8 +17,7 @@ Este proyecto es parte de ... y tiene como objetivo ...
     - [Requisitos](#requisitos)
     - [Instalación](#instalación)
     - [Correr servidor](#correr-servidor)
-- [Admin section](#admin-section)
-  - [Creación de super uruario](#creación-de-super-uruario)
+- [Admin panel](#admin-section)
 - [Contribución](#contribución)
 - [Site Preview](#site-preview )
 
@@ -103,22 +102,19 @@ pip install django Pillow
 
 #### Correr servidor
 ###### Luego, con las dependencias instaladas y el entorno activado -se puede dar cuenta que está activo porque al principio de la línea de comando deberá figurar '(nombre_del_entorno)' iniciar el servidor de desarrollo:
-: 
 ```bash
 - python manage.py runserver
 ```
 
-## Admin section
+## Admin panel
 ###### Una vez realizado los pasos previos para acceder al panel de administración deberá crear un usuario con tales permisos siguiendo las siguientes instrucciones:
-
-### Creación de super uruario
-##### Con el entorno virtual activado ejecuta la siguiente línea de código:
+- ##### 1. Con el entorno virtual activado ejecuta la siguiente línea de código:
 ```bash
 - python manage.py createsuperuser
 ```
-##### Crear un superusuario proporcionando un nombre de usuario, correo electrónico y contraseña cuando se te solicite. 
-##### Iniciar el servidor de desarrollo para la aplicación Django. 
-##### Acceder al panel de administración. Abre un navegador web y visita la siguiente URL (utilizando en nuestro caso el port 8000 default): http://localhost:8000/admin/
+- ##### 2. Crear un superusuario proporcionando un nombre de usuario, correo electrónico y contraseña cuando se te solicite. 
+- ##### 3. Iniciar el servidor de desarrollo para la aplicación Django. 
+- ##### 4. Acceder al panel de administración. Abre un navegador web y visita la siguiente URL (utilizando en nuestro caso el port 8000 default): http://localhost:8000/admin/
 
 
 
