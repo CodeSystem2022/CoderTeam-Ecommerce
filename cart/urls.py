@@ -1,10 +1,15 @@
-# cart/urls.py
-
 from django.urls import path
-from . import views
+from .views import carts , view_cart, add_to_cart, remove_from_cart, checkout
 
-app_name = 'cart'  # Esto establece el espacio de nombres para las URLs de la aplicación
+
+app_name = 'cart' 
 
 urlpatterns = [
-    path('carts/', views.carts, name='carts'),
+    path('carts/', carts, name='carts'),
+    path('carts/', view_cart, name='view_cart'),
+    # path('view/', view_cart, name='view_cart'),
+    # path('add/<int:product_id>/', add_to_cart, name='add_to_cart'),
+    path('add_to_cart/<int:item_id>/', add_to_cart, name='add_to_cart'),
+    path('remove_from_cart/<int:item_id>/', remove_from_cart, name='remove_from_cart'),
+    path('checkout/', checkout, name='checkout'),
 ]

@@ -2,6 +2,9 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth import logout
+from .forms import NewItemForm, EditItemForm
+from .models import Category, Item
+from cart.models import Cart, CartItem
 
 from .forms import NewItemForm, EditItemForm
 from .models import Category, Item
@@ -23,11 +26,19 @@ def items(request):
 def detail(request, pk):
     item = get_object_or_404(Item, pk=pk)
     related_items = Item.objects.filter(category=item.category, is_sold=False).exclude(pk=pk)[0:3]
+
+    if request.method == 'POST':
+        # Asumiendo que tienes un formulario para agregar al carrito
+        quantity = request.POST.get('quantity', 1)
+        cart, created = Cart.objects.get_or_create(user=request.user)
+        cart_item, created = CartItem.objects.get_or_create(cart=cart, item=item)
+        cart_item.quantity += int(quantity)
+        cart_item.save()
+
     return render(request, 'item/detail.html', {
         'item': item,
         'related_items': related_items
     })
-
 @login_required
 def new(request):
     if request.method == 'POST':
@@ -58,6 +69,28 @@ def edit(request, pk):
         'form': form,
         'title': 'Edit item',
     })
+
+# @login_required
+# def add_to_cart(request, pk):
+#     item = get_object_or_404(Item, pk=pk)
+#     cart, created = Cart.objects.get_or_create(user=request.user)
+#     cart_item, created = CartItem.objects.get_or_create(cart=cart, item=item)
+#     if not created:
+#         cart_item.quantity += 1
+#         cart_item.save()
+#     return redirect('item:detail', pk=item.id)
+
+def add_to_cart(request, item_id):
+    item = get_object_or_404(Item, pk=item_id)
+
+    cart, created = Cart.objects.get_or_create(user=request.user)
+
+    cart_item = CartItem.objects.create(cart=cart, item=item)
+
+    messages.success(request, f'{item.name} se ha agregado a tu carrito.')
+
+    return redirect('item:detail', pk=item_id)
+
 @login_required
 def delete(request, pk):
     item = get_object_or_404(Item, pk=pk, created_by=request.user)

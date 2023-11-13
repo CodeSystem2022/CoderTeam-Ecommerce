@@ -29,7 +29,13 @@
             </div>
         {% else %}  
         <a href="{% url 'conversation:new' item.id %}" class="inline-block mt-6 px-6 py-3 text-lg font-semibold bg-teal-500 text-white rounded-xl hover:bg-teal-700">Contactar</a>
-        <a href="{% url 'conversation:new' item.id %}" class="inline-block mt-6 px-6 py-3 text-lg font-semibold bg-teal-500 text-white rounded-xl hover:bg-teal-700">Agregar al carrito</a>
+        <form method="post" action="{% url 'item:detail' item.id %}">
+            {% csrf_token %}
+            <label for="quantity">Cantidad:</label>
+            <input type="number" name="quantity" value="1" min="1">
+            <button type="submit">Agregar al carrito</button>
+        </form>
+        <!-- <a href="{% url 'cart:carts' %}" class="inline-block mt-6 px-6 py-3 text-lg font-semibold bg-teal-500 text-white rounded-xl hover:bg-teal-700">Agregar al carrito</a> -->
         {% endif %}
     </div>
 </div>
