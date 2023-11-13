@@ -1,24 +1,30 @@
 # CoderTeam-Ecommerce
-## UTN/San Rafael   <img src="projectDocsFiles/logoUTN.png" width="20"> 
+## UTN/San Rafael   <img src="projectDocsFiles/logoUTN.png" width="20">
 <img src="projectDocsFiles/coder.gif" width="150">
 
 Este proyecto es parte de ... y tiene como objetivo ...
 
 ## Tabla de Contenidos
 
-- [Requisitos](#requisitos)
-- [Instalación](#instalación)
-- [Uso](#uso)
-- [Estructura de Directorios](#estructura-de-directorios)
+- [¿Cómo correr el proyecto?](#¿cómo-correr-el-proyecto?)
+  - [Requisitos](#requisitos)
+  - [Instalación](#instalación)
+  - [Uso](#uso) 
 - [Contribución](#contribución)
 - [Site Preview](#site-preview )
+
+  
+## ¿Cómo correr el proyecto?
+
+hggblj
 
 ## Requisitos
 
 Para ejecutar este proyecto, necesitas tener instalado Python 3 y las siguientes bibliotecas:
-- ...
-- ...
-- ...
+```bash
+- Django (version 4.2.7)
+- Pillow
+```
 
 Puedes instalar estas bibliotecas utilizando pip:
 
@@ -28,12 +34,12 @@ pip install -r requirements.txt
 ```
 Opción 2:
 ```bash
-pip install ... ... ...
+pip install django Pillow
 ```
 
 ## Instalación
 
-1. Clona este repositorio en tu máquina local.
+1. Clonar este repositorio en tu máquina local.
 ```bash
 git clone https://github.com/tu-usuario/tu-proyecto.git
 ```
@@ -54,15 +60,6 @@ Este proyecto consta de varios módulos:
 - **...**: Contiene funciones para ....
 - **...**: Automatiza ....
 - **...**: Analiza y visualiza ....
-
-
-## Estructura de Directorios
-
-- **...**: Contiene funciones para ...
-- **...**: Automatiza ....
-- **...**: El punto de entrada principal del proyecto.
-- **...**: Realiza análisis y ....
-
 
 ## Contribución
 
