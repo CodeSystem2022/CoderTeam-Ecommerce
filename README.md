@@ -50,34 +50,34 @@ python3 -m pip install --user virtualenv
 ###### Desde el directorio principal del proyecto recientemente clonado ejecute el siguiente comando para activar el entorno virtual:
 ##### En sistemas Windows:
 ```bash
-- enviromentEcommerce/Scripts/activate
+enviromentEcommerce/Scripts/activate
 ```
 ##### En sistemas basados en Unix (Linux/Mac):
 ```bash
-- source enviromentEcommerce/bin/activate
+source enviromentEcommerce/bin/activate
 
 ```
 #### Correr servidor
 ###### Luego con el entorno activado -se puede dar cuenta que está activo porque al principio de la línea de comando debería figurar _(enviromentEcommerce)_ ejecutar el servidor de desarrollo: 
 ```bash
-- python manage.py runserver
+python manage.py runserver
 ```
 
 ### 2. Nuevo Entorno virtual
 #### Creación
 ###### Desde el directorio principal del proyecto recientemente clonado ejecute el siguiente comando para generar el nuevo entorno virtual:
 ```bash
-- python -m venv nombre_del_entorno
+python -m venv nombre_del_entorno
 ```
 #### Activación
 ###### Desde el directorio principal del proyecto recientemente clonado ejecute el siguiente comando para activar el entorno virtual:
 ##### En sistemas Windows:
 ```bash
-- nombre_del_entorno/Scripts/activate
+nombre_del_entorno/Scripts/activate
 ```
 ##### En sistemas basados en Unix (Linux/Mac):
 ```bash
-- source nombre_del_entorno/bin/activate
+source nombre_del_entorno/bin/activate
 ```
 
 #### Requisitos
@@ -103,14 +103,14 @@ pip install django Pillow
 #### Correr servidor
 ###### Luego, con las dependencias instaladas y el entorno activado -se puede dar cuenta que está activo porque al principio de la línea de comando deberá figurar '(nombre_del_entorno)' iniciar el servidor de desarrollo:
 ```bash
-- python manage.py runserver
+python manage.py runserver
 ```
 
 ## Admin panel
 ###### Una vez realizado los pasos previos para acceder al panel de administración deberá crear un usuario con tales permisos siguiendo las siguientes instrucciones:
 - ##### 1. Con el entorno virtual activado ejecuta la siguiente línea de código:
 ```bash
-- python manage.py createsuperuser
+python manage.py createsuperuser
 ```
 - ##### 2. Crear un superusuario proporcionando un nombre de usuario, correo electrónico y contraseña cuando se te solicite. 
 - ##### 3. Iniciar el servidor de desarrollo para la aplicación Django. 
