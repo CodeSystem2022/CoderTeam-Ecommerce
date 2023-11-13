@@ -1,26 +1,13 @@
 from django.shortcuts import render, redirect
-
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth import logout 
 from item.models import Category, Item
-
+from django.http import HttpResponse
 from .forms import SignupForm
-
-from PIL import Image
-
-import os
 
 def index(request):
     items = Item.objects.filter(is_sold=False)[0:6]
     categories = Category.objects.all()
-    
-    for item in items:
-        
-        path = os.getcwd() + item.image.url
-        with Image.open(path) as img:
-            # Resize the image to the desired dimensions
-            resized_img = img.resize((5536, 4160))
-
-            # Overwrite the original image with the resized image
-            resized_img.save(path)
 
     return render(request, 'core/index.html', {
         'categories': categories,
@@ -29,6 +16,15 @@ def index(request):
 
 def contact(request):
     return render(request, 'core/contact.html')
+
+def about(request):
+    return render(request, 'core/about.html')
+
+def terms(request):
+    return render(request, 'core/terms.html')
+
+def politics(request):
+    return render(request, 'core/politics.html')
 
 def signup(request):
     if request.method == 'POST':
@@ -44,3 +40,8 @@ def signup(request):
     return render(request, 'core/signup.html', {
         'form': form
     })
+
+@login_required
+def logout_user(request):
+    logout(request)
+    return redirect('dashboard:index')
