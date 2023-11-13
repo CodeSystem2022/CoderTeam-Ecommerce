@@ -17,6 +17,8 @@ Este proyecto es parte de ... y tiene como objetivo ...
     - [Requisitos](#requisitos)
     - [Instalación](#instalación)
     - [Correr servidor](#correr-servidor)
+- [Admin section](#admin-section)
+  - [Creación de super uruario](#creación-de-super-uruario)
 - [Contribución](#contribución)
 - [Site Preview](#site-preview )
 
@@ -57,9 +59,9 @@ python3 -m pip install --user virtualenv
 
 ```
 #### Correr servidor
-###### Luego con el entorno activado -se puede dar cuenta que está activo porque al principio de la línea de comando debería figurar _(enviromentEcommerce)_: 
+###### Luego con el entorno activado -se puede dar cuenta que está activo porque al principio de la línea de comando debería figurar _(enviromentEcommerce)_ ejecutar el servidor de desarrollo: 
 ```bash
-- python -m manage.py runserver
+- python manage.py runserver
 ```
 
 ### 2. Nuevo Entorno virtual
@@ -100,11 +102,34 @@ pip install django Pillow
 ```
 
 #### Correr servidor
-###### Luego, con las dependencias instaladas y el entorno activado -se puede dar cuenta que está activo porque al principio de la línea de comando deberá figurar '(nombre_del_entorno)' ejecutar: 
+###### Luego, con las dependencias instaladas y el entorno activado -se puede dar cuenta que está activo porque al principio de la línea de comando deberá figurar '(nombre_del_entorno)' iniciar el servidor de desarrollo:
+: 
 ```bash
-- python -m manage.py runserver
+- python manage.py runserver
 ```
 
+## Admin section
+###### Una vez realizado los pasos previos para acceder al panel de administración deberá crear un usuario con tales permisos siguiendo las siguientes instrucciones:
+
+### Creación de super uruario
+##### Con el entorno virtual activado ejecuta la siguiente línea de código:
+```bash
+- python manage.py createsuperuser
+```
+##### Crear un superusuario proporcionando un nombre de usuario, correo electrónico y contraseña cuando se te solicite. 
+##### Iniciar el servidor de desarrollo para la aplicación Django. 
+##### Acceder al panel de administración. Abre un navegador web y visita la siguiente URL (utilizando en nuestro caso el port 8000 default): http://localhost:8000/admin/
+
+
+
+
+## Site Preview  
+
+
+
+
+<img src="projectDocsFiles/Coder Team (1).gif" width="70">
+<img src="projectDocsFiles/Coder Team.gif" width="100">
 ## Contribución
 
 Si deseas contribuir a este proyecto, sigue estos pasos:
@@ -113,13 +138,3 @@ Si deseas contribuir a este proyecto, sigue estos pasos:
 2. Crea una nueva rama para tus cambios.
 3. Realiza tus cambios y pruebas.
 4. Envía una solicitud de extracción (Pull Request) describiendo tus cambios.
-
-
-
-
-## Site Preview  
-<img src="projectDocsFiles/Coder Team (1).gif" width="70">
-
-
-
-<img src="projectDocsFiles/Coder Team.gif" width="100">
