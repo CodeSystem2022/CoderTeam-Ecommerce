@@ -1,12 +1,11 @@
 {% extends 'core/base.html' %}
 
-{% block title %}Inbox{% endblock %}
+{% block title %}Bandeja{% endblock %}
 
 {% block content %}
-<h1 class="mb-6 text-3xl">Inbox</h1>
+<h1 class="mb-6 text-3xl">Bandeja</h1>
 
 <div class="space-y-6">
-    <h1>HOLA</h1>
     {% for conversation in conversations %}
         <a href="{% url 'conversation:detail' conversation.id %}">
             <div class="p-6 flex bg-gray-100 rounded-xl">

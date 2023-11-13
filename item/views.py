@@ -27,6 +27,7 @@ def detail(request, pk):
         'item': item,
         'related_items': related_items
     })
+
 @login_required
 def new(request):
     if request.method == 'POST':
@@ -42,6 +43,7 @@ def new(request):
         'form': form,
         'title': 'New item',
     })
+
 @login_required
 def edit(request, pk):
     item = get_object_or_404(Item, pk=pk, created_by=request.user)
