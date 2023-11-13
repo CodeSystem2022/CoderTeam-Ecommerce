@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from item.models import Item
 from .models import Cart, CartItem 
+import stripe
+
 #from .models import Cart, Product, CartItem
 
 # def view_cart(request):
@@ -18,16 +20,32 @@ from .models import Cart, CartItem
 #         cart_item.save()
 #     return render(request, 'cart/add_to_cart.html', {'product': product})
 
+
+stripe.api_key = 'tu_clave_secreta'
+
+def process_payment(request):
+    if request.method == 'POST':
+        token = request.POST.get('stripeToken')
+        amount = 1000  # Monto en centavos, por ejemplo, $10.00
+
+        try:
+            charge = stripe.Charge.create(
+                amount=amount,
+                currency='usd',
+                description='Compra en tu tienda',
+                source=token,
+            )
+        except stripe.error.CardError as e:
+            return render(request, 'payment/failed.html', {'error': e.error.message})
+
+        return render(request, 'payment/success.html')
+    else:
+        return render(request, 'payment/checkout.html')
+    
 def carts(request):
-    # Obtener el carrito del usuario actual o crear uno nuevo si no existe
     cart, created = Cart.objects.get_or_create(user=request.user)
-
-    # Obtener todos los elementos en el carrito actual
     cart_items = CartItem.objects.filter(cart=cart)
-
-    # Calcular el total del carrito sumando el precio de cada artículo multiplicado por la cantidad
     total = sum(item.item.price * item.quantity for item in cart_items)
-
     return render(request, 'cart/carts.html', {
         'cart_items': cart_items,
         'total': total,
