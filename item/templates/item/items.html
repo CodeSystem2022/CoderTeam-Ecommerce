@@ -3,17 +3,17 @@
 {% block title %}Items{% endblock %}
 
 {% block content %}
-    <div class="pb-6 grid grid-cols-4 gap-4 bg-gray-100">
+    <div class="pb-6 grid grid-cols-4 gap-4 bg-gray-200 p-6">
         <div class="col-span-1">
             <form method="get" action="{% url 'item:items' %}">
                 <input name="query" class="w-full py-4 px-6 border rounded-xl" type="text" value="{{ query }}" placeholder="Find a bike, a chair or car...">
 
-                <button class="mt-2 py-4 px-8 text-lg bg-teal-500 text-white rounded-xl">Search</button>
+                <button class="mt-2 py-4 px-8 text-lg bg-teal-400 text-white rounded-xl hover:bg-sky-500 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 ">Buscar</button>
             </form>
 
             <hr class="my-6">
 
-            <p class="font-semibold">Categories</p>
+            <p class="font-semibold">Categorías</p>
 
             <ul>
                 {% for category in categories %}
@@ -25,29 +25,30 @@
 
             <hr class="my-6">
 
-            <p class="font-semibold">Clear filters</p>
+            <p class="font-semibold">Limpiar Filtros</p>
 
             <ul>
-                <li><a href="{% url 'item:items' %}" class="mt-2 py-4 px-8 inline-block bg-yellow-500 text-lg rounded-xl text-white">Clear</a>
+                <li><a href="{% url 'item:items' %}" class="mt-2 py-4 px-8 inline-block bg-yellow-500 text-lg rounded-xl text-white">Limpiar</a>
         </div>
 
-        <div class="col-span-3">
+        <div class="col-span-3" >
             <div class="grid grid-cols-3 gap-3">
                 {% for item in items %}
-                    <div>
+                    <div class="rounded-md overflow-hidden border border-white bg-white">
                         <a href="{% url 'item:detail' item.id %}">
-                            <div>
-                                <img src="{{ item.image.url }}" class="rounded-t-xl">
+                            <div class="p-6 ">
+                                <img src="{{ item.image.url }}" class="rounded-t-lg w-auto h-50">
                             </div>
-    
-                            <div class="p-6 bg-white rounded-b-xl">
+        
+                            <div class="p-6 bg-yellow-100 rounded-b-xl h-full">
                                 <h2 class="text-2xl">{{ item.name }}</h2>
-                                <p class="text-gray-500">Price: {{ item.price }}</p>
+                                <p class="text-gray-500">Precio: {{ item.price }}</p>
                             </div>
                         </a>
                     </div>
                 {% endfor %}
             </div>
         </div>
+        
     </div>
 {% endblock %}
