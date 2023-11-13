@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'core',
     'dashboard',
     'item',
+    'cart',
 ]
 
 MIDDLEWARE = [
@@ -80,6 +81,9 @@ TEMPLATES = [
         },
     },
 ]
+
+STRIPE_PUBLIC_KEY = 'pk_test_7IFWQnLbM3rXRm4eLNh00Fr87t'
+STRIPE_SECRET_KEY = 'sk_test_7IFWQnLbM3rXRm4eLNh00Fr87t'
 
 WSGI_APPLICATION = 'puddle.wsgi.application'
 

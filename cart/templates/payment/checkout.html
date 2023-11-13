@@ -1,0 +1,16 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Checkout{% endblock %}
+
+{% block content %}
+  <h1 class="text-3xl font-semibold mb-6">Checkout</h1>
+  <form action="{% url 'cart:process_payment' %}" method="POST">
+    {% csrf_token %}
+    <!-- Agregar campos del formulario aquí -->
+    <script src="https://js.stripe.com/v3/"></script>
+    <script>
+      // Configurar Stripe.js aquí
+    </script>
+    <button type="submit">Pagar</button>
+  </form>
+{% endblock %}
