@@ -1,7 +1,6 @@
-# CoderTeam-Ecommerce 
-## Proyecto intregardor
-
-<img src="projectDocsFiles/logoUTN.png" width="148"><img src="projectDocsFiles/san-rafael-vf.png" width="200"><img src="projectDocsFiles/coder.gif" width="200">
+# CoderTeam-Ecommerce
+## UTN/San Rafael   <img src="projectDocsFiles/logoUTN.png" width="20"> 
+<img src="projectDocsFiles/coder.gif" width="150">
 
 Este proyecto es parte de ... y tiene como objetivo ...
 
@@ -12,6 +11,7 @@ Este proyecto es parte de ... y tiene como objetivo ...
 - [Uso](#uso)
 - [Estructura de Directorios](#estructura-de-directorios)
 - [Contribución](#contribución)
+- [Site Preview](#site-preview )
 
 ## Requisitos
 
@@ -72,3 +72,13 @@ Si deseas contribuir a este proyecto, sigue estos pasos:
 2. Crea una nueva rama para tus cambios.
 3. Realiza tus cambios y pruebas.
 4. Envía una solicitud de extracción (Pull Request) describiendo tus cambios.
+
+
+
+
+## Site Preview  
+<img src="projectDocsFiles/Coder Team (1).gif" width="70">
+
+
+
+<img src="projectDocsFiles/Coder Team.gif" width="100">
