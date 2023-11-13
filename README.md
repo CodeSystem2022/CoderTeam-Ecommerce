@@ -1,7 +1,7 @@
 # CoderTeam-Ecommerce 
 ## Proyecto intregardor
 
-<img src="" width="148"><img src="" width="200">
+<img src="projectDocsFiles/logoUTN.png" width="148"><img src="projectDocsFiles/san-rafael-vf.png" width="200"><img src="projectDocsFiles/coder.gif" width="200">
 
 Este proyecto es parte de ... y tiene como objetivo ...
 
