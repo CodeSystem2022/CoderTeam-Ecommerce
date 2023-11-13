@@ -1,0 +1,152 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Equipo iMobile{% endblock %}
+
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Equipo iMobile</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #a19c9c;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .team-member {
+            background-color: rgb(66, 66, 66);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 10px;
+            box-sizing: border-box;
+            text-align: center;
+            border-radius: 10%;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        h2 {
+            font-weight: bold;
+            font-size: 1.2em;
+            margin: 5px 0;
+        }
+
+        p {
+            margin: 5px 0;
+        }
+
+        h1 {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 2.5em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <h1>iMobile</h1>
+
+        <a href="https://github.com/wildBlueTurtle"
+            class="team-member px-6 py-3 text-lg font-semibold bg-teal-200 text-white rounded-xl hover:bg-teal-700">
+            <img src="{% static 'images/nat.jpeg' %}" alt="Natán Jabie">
+            <h2>Natán Jabie</h2>
+            <p>¡Apasionado por la tecnología y la innovación!</p>
+        </a>
+
+
+        <a href="https://github.com/GonzaloQuirogaS"
+            class="team-member px-6 py-3 text-lg font-semibold bg-teal-200 text-white rounded-xl hover:bg-teal-700">
+            <img src="{% static 'images/gon.jpeg' %}" alt="Gonzalo Quiroga Sassu">
+            <h2>Gonzalo Quiroga Sassu</h2>
+            <p>¡Amante de la tecnología y buscando siempre la excelencia!</p>
+        </a>
+
+        <a href="https://github.com/yolyhil"
+            class="team-member px-6 py-3 text-lg font-semibold bg-teal-200 text-white rounded-xl hover:bg-teal-700">
+            <img src="{% static 'images/yoly.jpeg' %}" alt="Hilda Yolanda Ortiz">
+            <h2>Hilda Yolanda Ortiz</h2>
+            <p>¡Con una pasión por la tecnología que ilumina nuestro equipo!</p>
+        </a>
+
+
+        <a href="https://github.com/GonzaloQuirogaS"
+            class="team-member px-6 py-3 text-lg font-semibold bg-teal-200 text-white rounded-xl hover:bg-teal-700">
+            <img src="{% static 'images/vero.jpeg' %}" alt="Veronica Cardenas">
+            <h2>Veronica Cardenas</h2>
+            <p>¡Dedicada a crear experiencias tecnológicas increíbles!</p>
+        </a>
+
+
+        <a href="https://github.com/GonzaloQuirogaS"
+            class="team-member px-6 py-3 text-lg font-semibold bg-teal-200 text-white rounded-xl hover:bg-teal-700">
+            <img src="{% static 'images/adam.jpeg' %}" alt="Adan Gomez">
+            <h2>Adan Gomez</h2>
+            <p>¡Explorando las posibilidades tecnológicas para un mundo mejor!</p>
+        </a>
+
+
+        <a href="https://github.com/MarceloLamas"
+            class="team-member px-6 py-3 text-lg font-semibold bg-teal-200 text-white rounded-xl hover:bg-teal-700">
+            <img src="{% static 'images/marce.jpeg' %}" alt="Marcelo Lamas">
+            <h2>Marcelo Lamas</h2>
+            <p>¡Apasionado por la innovación y la calidad en la tecnología!</p>
+        </a>
+
+
+        <a href="https://github.com/DiegoFAlvarez97"
+            class="team-member px-6 py-3 text-lg font-semibold bg-teal-200 text-white rounded-xl hover:bg-teal-700">
+            <img src="{% static 'images/diego.jpeg' %}" alt="Diego Alvarez">
+            <h2>Diego Alvarez</h2>
+            <p>¡Comprometido con ofrecer la mejor experiencia tecnológica a nuestros clientes!</p>
+        </a>
+
+
+        <a href="https://github.com/nazarenomartin"
+            class="team-member px-6 py-3 text-lg font-semibold bg-teal-200 text-white rounded-xl hover:bg-teal-700">
+            <img src="{% static 'images/naza.jpeg' %}" alt="Martín Nazareno Maya">
+            <h2>Martín Nazareno Maya</h2>
+            <p>¡Apasionado por la tecnología y comprometido con la satisfacción del cliente!</p>
+        </a>
+
+    </section>
+
+    
+</body>
+
+</html>
+
+{% endblock %}

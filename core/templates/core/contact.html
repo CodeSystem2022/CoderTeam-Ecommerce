@@ -1,7 +1,89 @@
 {% extends 'core/base.html' %}
 
-{% block title %}Contact{% endblock %}
+{% block title %}Equipo iMobile{% endblock %}
 
 {% block content %}
-    <h1>The contact page</h1>
+{% load static %} 
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Equipo iMobile</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fffafa;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h2 {
+            font-weight: bold;
+            font-size: 1.2em;
+            margin: 5px 0;
+        }
+
+        p {
+            margin: 5px 0;
+        }
+
+        h1 {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 2.5em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <h2>Misión</h2>
+        <p>Nuestra misión en iMobile es proporcionar a nuestros clientes acceso a la última tecnología, brindando
+            productos de calidad que mejoren su estilo de vida y conectividad.</p>
+    </section>
+
+    <section>
+        <h2>Visión</h2>
+        <p>En iMobile, aspiramos a ser reconocidos como el principal destino para aquellos que buscan tecnología de
+            vanguardia. Buscamos constantemente expandir nuestro catálogo para incluir las últimas novedades en
+            dispositivos móviles, airpods, smartwatches y otros gadgets innovadores.</p>
+    </section>
+
+    <section>
+        <h2>Valores</h2>
+        <ul>
+            <li><strong>Innovación:</strong> Abrazamos la innovación y buscamos constantemente productos que mejoren la
+                vida de nuestros clientes.</li>
+            <li><strong>Calidad:</strong> Nos comprometemos a ofrecer productos y servicios de la más alta calidad,
+                garantizando la satisfacción del cliente.</li>
+            <li><strong>Conexión:</strong> Entendemos la importancia de la conectividad en la vida moderna y ofrecemos
+                productos que facilitan la comunicación y el acceso a la información.</li>
+            <li><strong>Experiencia del Cliente:</strong> Nos esforzamos por brindar una experiencia de compra
+                excepcional, desde la selección de productos hasta el servicio postventa.</li>
+        </ul>
+    </section>
+</body>
+
+</html>
+
 {% endblock %}
