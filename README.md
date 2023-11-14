@@ -1,5 +1,5 @@
-# CoderTeam-Ecommerce
-# UTN/San Rafael   <img src="projectDocsFiles/logoUTN.png" width="20">
+# `CoderTeam-Ecommerce`
+# `UTN/San Rafael` <img src="projectDocsFiles/logoUTN.png" width="20">
 <img src="projectDocsFiles/coder.gif" width="150">
 
 Este proyecto es parte de ... y tiene como objetivo ...
@@ -20,6 +20,22 @@ Este proyecto es parte de ... y tiene como objetivo ...
 - [Admin panel](#admin-section)
 - [Contribución](#contribución)
 - [Site Preview](#site-preview )
+
+
+<div style="overflow-x: auto; overflow-y: hidden;">
+  <table>
+     <tr>
+      <th>Profesor</th>
+      <th> Ariel Betancud </th>
+      </tr>
+     <tr>
+      <th>Materia</th>
+      <th> Laboratorio IV </th>
+      <th> Metodología de Sistemas</th>
+    </tr>
+
+  </table>
+</div>
 
 ## ¿Cómo correr el proyecto?
 ### Pasos generales
